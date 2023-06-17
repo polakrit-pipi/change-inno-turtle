@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1160px;
+    margin: 80px auto;
+}
+
+.display {
+    width: 1160px;
+    height: 800px;
+    background-color: rgb(226, 226, 226);
+    margin: 0 auto;
+    border: 40px solid #000;
+    border-radius: 30px;
+}
+
+.googlemap {
+    margin: 30px auto;
+    width: 98%;
+    height: 300px;
+}
+
+.googlemap img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.battery {
+    border-radius: 10px;
+    width: 31%;
+    height: 300px;
+    background-color: white;
+}
+.speed {
+    border-radius: 10px;
+    width: 31%;
+    background-color: white;
+}
+.accident-car {
+    border-radius: 10px;
+    width: 31%;
+    background-color: white;
+}
+
+.battery img {
+    width: 300px;
+}
+
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="progressbar"] {
+    --size: 10rem;
+    --fg: #369;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+
+  .battery div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .accident-car {
+    position: relative;
+  }
+
+  .box img {
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+
+  button:nth-child(2) {
+    margin-left: 10px;
+  }
+  
+  button:nth-child(2) {
+    margin-right: 100px;
+  }
+  button{
+    outline:0; 
+    font-size:1em;
+    font-weight:600;
+    background:rgb(233, 233, 233);
+    border:none;
+    padding:1em 1.2em;
+    transition:all .3s ease-out; 
+    box-shadow:inset 0 -8px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #7bda54,
+      2px 2px 0 0 #7bda54,
+      3px 3px 0 0 #7bda54,
+      4px 4px 0 0 #7bda54,
+      5px 5px 0 0 #7bda54,
+      6px 6px 0 0 #7bda54,
+      7px 7px 0 0 #7bda54,
+      8px 8px 0 0 #7bda54,
+      9px 9px 0 0 #7bda54,
+      10px 10px 0 0 #7bda54,
+      11px 11px 0 0 #7bda54,
+      12px 12px 0 0 #7bda54;
+  }
+  .btn1:hover{
+    color:#444;
+  }
+  .btn1:active{
+    color:#222;
+    box-shadow:inset 0 -4px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #7bda54,
+      2px 2px 0 0 #7bda54,
+      3px 3px 0 0 #7bda54,
+      4px 4px 0 0 #7bda54,
+      5px 5px 0 0 #7bda54;
+  }
+  .btn2{
+    outline:0; 
+    font-size:1em;
+    font-weight:600;
+    background:rgb(233, 233, 233);
+    border:none;
+    padding:1em 1.2em;
+    transition:all .3s ease-out; 
+    box-shadow:inset 0 -8px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #ff1616,
+      2px 2px 0 0 #ff1616,
+      3px 3px 0 0 #ff1616,
+      4px 4px 0 0 #ff1616,
+      5px 5px 0 0 #ff1616,
+      6px 6px 0 0 #ff1616,
+      7px 7px 0 0 #ff1616,
+      8px 8px 0 0 #ff1616,
+      9px 9px 0 0 #ff1616,
+      10px 10px 0 0 #ff1616,
+      11px 11px 0 0 #ff1616,
+      12px 12px 0 0 #ff1616;
+  }
+  .btn2:hover{
+    color:#444;
+  }
+  .btn2:active{
+    color:#222;
+    box-shadow:inset 0 -4px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #ff1616,
+      2px 2px 0 0 #ff1616,
+      3px 3px 0 0 #ff1616,
+      4px 4px 0 0 #ff1616,
+      5px 5px 0 0 #ff1616;
+  }
+
+  .speed {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: Kanit;
+    font-weight: bold;
+  }
+
+  .battery .c1 {
+    margin-left: 20px;
+  }
+  .battery {
+    position: relative;
+  }
+  .battery .c2 {
+    position: absolute;
+    right: 12px;
+    bottom: 25px;
+  }
+
+  .tem p {
+    position: absolute;
+    bottom: 48px;
+    left: 45%;
+    font-family: kanit;
+    font-size: 2rem;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .display {
+      width: 700px;
+      margin: 0 auto;
+      height: 800px;
+    }
+
+    .googlemap img {
+      width: 100%;
+      height: 300px;
+    }
+    .battery img {
+      width: 200px;
+    }
+
+    .battery {
+      margin-bottom: 100px;
+    }
+    .speed {
+      margin-bottom: 100px;
+    }
+    .accident-car {
+      margin-bottom: 100px;
+    }
+
+    .tem p {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+    .box img {
+      width: 100px;
+    }
+
+    .btn1 {
+      width: 90px;
+      float: right;
+    }
+    .btn2 {
+      width: 90px;
+    }
+  }
