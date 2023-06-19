@@ -90,6 +90,7 @@ body {
 
 .image {
     width: 400px;
+    margin-right: 12%;
 }
 
 .image > img {

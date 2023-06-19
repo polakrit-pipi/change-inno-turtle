@@ -20,19 +20,19 @@ window.addEventListener(`DOMContentLoaded`, () => {
 
 
     const light = new THREE.DirectionalLight(0xffffff, 5)
-    light.position.set(10000, 10000, 10000)
+    light.position.set(300, 10000, 10000)
     scene.add(light)
 
     const lightss = new THREE.DirectionalLight(0xffffff, 1)
-    light.position.set(-10000, 1000, 10000)
+    light.position.set(-1000, 100, 1000)
     scene.add(lightss)
 
     const spotLight = new THREE.SpotLight(0xffffff, 5, 100);
-    spotLight.position.set(20, 10, 10);
+    spotLight.position.set(200, 5, 10);
     spotLight.castShadow = true;
     spotLight.shadow.mapSize.width = 1024;
     spotLight.shadow.mapSize.height = 1024;
-    spotLight.shadow.camera.near = 10;
+    spotLight.shadow.camera.near = 300;
     spotLight.shadow.camera.far = 4000;
     spotLight.shadow.camera.fov = 30;
     scene.add(spotLight);
@@ -52,7 +52,7 @@ window.addEventListener(`DOMContentLoaded`, () => {
     loader.load('sea_turtle.glb', function (glb) {
         console.log(glb)
         const root = glb.scene;
-        root.scale.set(0.9, 0.9, 0.9)
+        root.scale.set(1.5, 1.5, 1.5)
         scene.add(root)
     }, function (xhr) {
         console.log((xhr.loaded / xhr.total * 100) + "% loaded")
@@ -73,7 +73,7 @@ window.addEventListener(`DOMContentLoaded`, () => {
     controls.minDistance = 5.0;
     controls.maxDistance = 1000;
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 5;
+    controls.autoRotateSpeed = 3;
     renderer.setAnimationLoop(() => {
 
         controls.update();
